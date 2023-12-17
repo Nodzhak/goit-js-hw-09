@@ -2,8 +2,8 @@ const feedbackForm = document.querySelector('.feedback-form');
 const keyLocalStorage = 'feedback-form-state';
 const email = document.querySelector('.feedback-input-email');
 const message = document.querySelector('.message');
-const inputEmail = form.elements.email;
-const textArea = form.elements.message;
+const inputEmail = feedbackForm.elements.email;
+const textArea = feedbackForm.elements.message;
 
 feedbackForm.addEventListener('input', debounce(getTextValue, 500));
 feedbackForm.addEventListener('submit', submitedForm);
@@ -31,7 +31,7 @@ function submitedForm(event) {
     localStorage.removeItem(keyLocalStorage);
     feedbackForm.reset();
   } else {
-    console.log(alert('Це ще не все!'));
+    alert('Це ще не все!');
   }
 }
 
